@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RD - Michael Andrade Projeto</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+        }
+        #image-container {
+            width: 99vw;
+            height: 99vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+    </style>
+    <script>
+        let currentIndex = 0;
+        const images = ['imagem.png','imagem2.png', 'imagem3.png', 'imagem4.png'];
+
+        function changeImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            document.getElementById('image').src = images[currentIndex];
+        }
+
+        setInterval(changeImage, 15000); // Troca a imagem a cada 15 segundos
+
+        function refreshPage() {
+            location.reload();
+        }
+
+        setInterval(refreshPage, 60000); // Atualiza a página a cada 60 segundos
+    </script>
+</head>
+<body>
+    <div id="image-container">
+        <img id="image" src="imagem.png" alt="Imagem">
+    </div>
+</body>
+</html>
