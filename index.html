@@ -32,19 +32,19 @@
 </head>
 <body>
   <div id="image-container">
-    <img id="current-image" src="imagens/imagem.png" alt="Imagem em Exibição">
+    <img id="current-image" src="https://raw.githubusercontent.com/RD-Saude/Produtividade-24hr/main/Imagens/imagem.png" alt="Imagem em Exibição">
   </div>
 
   <script>
     const imagens = [
-      'imagens/imagem.png',
-      'imagens/imagem2.png',
-      'imagens/imagem3.png',
-      'imagens/imagem4.png'
+      'https://raw.githubusercontent.com/RD-Saude/Produtividade-24hr/main/Imagens/imagem.png',
+      'https://raw.githubusercontent.com/RD-Saude/Produtividade-24hr/main/Imagens/imagem2.png',
+      'https://raw.githubusercontent.com/RD-Saude/Produtividade-24hr/main/Imagens/imagem3.png',
+      'https://raw.githubusercontent.com/RD-Saude/Produtividade-24hr/main/Imagens/imagem4.png'
     ];
 
     let indexAtual = 0;
-    const tempoAtualizacao = 3000; // 3000ms = 3 segundos
+    const tempoAtualizacao = 1000; // 1000ms = 3 minutos
 
     function atualizarImagem() {
       const imagemElement = document.getElementById('current-image');
