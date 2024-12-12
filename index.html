@@ -29,19 +29,19 @@
 </head>
 <body>
   <div id="image-container">
-    <img id="current-image" src="image/imagem1.png" alt="Imagem em Exibição">
+    <img id="current-image" src="imagens/imagem1.png" alt="Imagem em Exibição">
   </div>
 
   <script>
     const imagens = [
-      'image/imagem1.png',
-      'image/imagem2.png',
-      'image/imagem3.png',
-      'image/imagem4.png'
+      'imagens/imagem1.png',
+      'imagens/imagem2.png',
+      'imagens/imagem3.png',
+      'imagens/imagem4.png'
     ];
 
     let indexAtual = 0;
-    const tempoAtualizacao = 10000; // 10000ms = 10 segundo
+    const tempoAtualizacao = 1000; // 1000ms = 1 segundo
 
     function atualizarImagem() {
       // Atualiza a imagem
