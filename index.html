@@ -44,7 +44,8 @@
     ];
 
     let indexAtual = 0;
-    const tempoAtualizacao = 10000; // 10 seg
+    const tempoAtualizacao = 10000; // 10 segundos
+    let contadorTrocas = 0; // Contador para acompanhar quantas imagens foram exibidas
 
     function atualizarImagem() {
       const imagemElement = document.getElementById('current-image');
@@ -58,6 +59,14 @@
 
       // Passa para a próxima imagem
       indexAtual = (indexAtual + 1) % imagens.length;
+      contadorTrocas++; // Aumenta o contador de trocas
+
+      // Se todas as 4 imagens foram exibidas, faz o refresh
+      if (contadorTrocas === imagens.length) {
+        setTimeout(() => {
+          location.reload(); // Atualiza a página após a troca de todas as imagens
+        }, tempoAtualizacao); // Aguarda o tempo de exibição da última imagem
+      }
     }
 
     // Atualiza a imagem a cada 'tempoAtualizacao' milissegundos
